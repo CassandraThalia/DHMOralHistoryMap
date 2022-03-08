@@ -1,0 +1,67 @@
+<html>
+    <head>
+      <title>DHM Oral History Map</title>
+      
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""/>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet"> 
+      
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""></script>
+
+    <style>
+        #map { 
+            height: 100%; 
+        }
+        header {
+            height: max-content;
+            color: white;
+            background-color: black;
+            padding: 3px 10px;
+            font-family: sans-serif;
+            display: flex;
+        }
+        header > img {
+            width: 40px;
+            padding: 10px
+        }
+
+        header > h1 {
+            align-self: center;
+        }
+
+        #about {
+            height: max-content;
+            width: 400px;
+            background: rgba(255,255,255,0.8);
+            position: fixed;
+            left: 15px;
+            top: 100px;
+            z-index: 2;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+    </style>
+
+    </head>
+
+    <header>
+        <img src="logo.png" />
+        <h1>Dartmouth Heritage Museum</h1>
+    </header>
+    
+    <body>
+        <div id="about">
+            <b>About this Map</b>
+            <p>This map features oral history clips from the Dartmouth Heritage Museum's oral history collection. They were collected in the 1980s and 90s by the Dartmouth Museum Society. All of the interviewees are Dartmouthians who survived the Dartmouth/Halifax explosion of 1917, which remains the second largest manmade explosion in history.</p>
+        </div>
+        <div id="map"></div>
+    </body>
+    
+    <script src="main.js"></script>
+    </html>
