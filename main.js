@@ -10,47 +10,154 @@
         accessToken: 'pk.eyJ1IjoiY2Fzc2FuZHJhdGhhbGlhIiwiYSI6ImNsMGNqanBqeDBnbGQzY3BsaWpvY3YzbXEifQ.SW6zwmSWhUFdnHNYT6rDQA'
     }).addTo(map);
 
-    let LangillePopUp = "<h2>Walter Langille Interview</h2> \
-    <iframe width=\"100%\" height=\"166\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1198852405&color=%23cc9844&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true\"></iframe><div style=\"font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;\"><a href=\"https://soundcloud.com/user-392462200\" title=\"Dartmouth Heritage Museum\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Dartmouth Heritage Museum</a> · <a href=\"https://soundcloud.com/user-392462200/halifaxdartmouth-explosion-series-walden-langille-interview\" title=\"Halifax/Dartmouth Explosion Series - Walden Langille Interview\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Halifax/Dartmouth Explosion Series - Walden Langille Interview</a></div>"
+    //----------------------------------- ICONS ----------------------------------------- 
+    var greenIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
 
-    L.marker([44.66964336000262, -63.55930055991591])
-    .bindPopup(LangillePopUp)
-    .addTo(map);
+    var redIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
 
-    let GentlesPopUp = "<h2>Verna Gentles Interview</h2> \
-    <iframe width=\"100%\" height=\"166\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1115690701&color=%23cc9844&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true\"></iframe><div style=\"font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;\"><a href=\"https://soundcloud.com/user-392462200\" title=\"Dartmouth Heritage Museum\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Dartmouth Heritage Museum</a> · <a href=\"https://soundcloud.com/user-392462200/halifaxdartmouth-explosion-series-verna-gentles-interview\" title=\"Halifax/Dartmouth Explosion Series: Verna Gentles Interview\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Halifax/Dartmouth Explosion Series: Verna Gentles Interview</a></div>";
+    var blueIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
 
-    L.marker([44.658917, -63.571400])
-    .bindPopup(GentlesPopUp)
-    .addTo(map);
+    var violetIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
 
-    let ArdleyPopUp = "<h2>Mabel Ardley Interview</h2> \
-    <iframe width=\"100%\" height=\"166\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1111229461&color=%23cc9844&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true\"></iframe><div style=\"font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;\"><a href=\"https://soundcloud.com/user-392462200\" title=\"Dartmouth Heritage Museum\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Dartmouth Heritage Museum</a> · <a href=\"https://soundcloud.com/user-392462200/halifaxdartmouth-explosion-series-mabel-ardley-interview\" title=\"Halifax/Dartmouth Explosion Series: Mabel Ardley Interview\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Halifax/Dartmouth Explosion Series: Mabel Ardley Interview</a></div>";
+    var expIcon = new L.Icon({
+        iconUrl: 'exp2.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [60, 60],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
 
-    L.marker([44.6693319810874, -63.56489863108046])
-    .bindPopup(ArdleyPopUp)
-    .addTo(map);
+    //----------------------------------- LISTENING MARKERS AND POPUPS ----------------------------------------- 
+    let markerGroup = L.layerGroup().addTo(map);
 
-    let MorashPopUp = "<h2>Ethel Morash Interview</h2> \
-    <iframe width=\"100%\" height=\"166\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1109669020&color=%23cc9844&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true\"></iframe><div style=\"font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;\"><a href=\"https://soundcloud.com/user-392462200\" title=\"Dartmouth Heritage Museum\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Dartmouth Heritage Museum</a> · <a href=\"https://soundcloud.com/user-392462200/halifaxdartmouth-explosion-series-ethel-morash-interview-2\" title=\"Halifax/Dartmouth Explosion Series: Ethel Morash Interview (1)\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Halifax/Dartmouth Explosion Series: Ethel Morash Interview (1)</a></div>";
+    let popUpSetUp = (title, desc, img, media) => {
+        return '<h2>' + title + '</h2> \
+            <div id="cont"> \
+                <img src="' + img + '"/> \
+            <p>' + desc + '</p> \
+            <div id="player">' + createMediaPlayer(media) + '</div> \
+        </div>'
+    }
 
-    L.marker([44.67163177762183, -63.584244984874076])
-    .bindPopup(MorashPopUp)
-    .addTo(map);
+    let popUpStyle = { className: "popUpStyle", maxWidth: 500 };
+
+    L.marker([44.66964336000262, -63.55930055991591], {icon: violetIcon})
+    .bindPopup(popUpSetUp("Walter Langille Interview",
+        "",
+        "",
+        "/audio/Langille.mp3"), popUpStyle)
+    .addTo(markerGroup);
+
+    L.marker([44.658917, -63.571400], {icon: violetIcon})
+    .bindPopup(popUpSetUp("Verna Gentles Interview",
+        "Verna Gentles was on the ferry at the time of the explosion and suffered a head wound in the blast.",
+        "/images/Gentles.png",
+        "/audio/Gentles.mp3"), popUpStyle)
+    .addTo(markerGroup);
+
+    L.marker([44.6693319810874, -63.56489863108046], {icon: violetIcon})
+    .bindPopup(popUpSetUp("Mabel Ardley Interview",
+        "",
+        "",
+        "/audio/Ardley.mp3"), popUpStyle)
+    .addTo(markerGroup);
+
+    L.marker([44.67163177762183, -63.584244984874076], {icon: violetIcon})
+    .bindPopup(popUpSetUp("Ethel Morash Interview",
+        "",
+        "",
+        "/audio/Morash.mp3"), popUpStyle)
+    .addTo(markerGroup);
+
+    L.marker([44.671336002053174, -63.58072735706985], {icon: violetIcon})
+    .bindPopup(popUpSetUp("Leighton Dillman Interview",
+           "Leighton was working at the Consumer Cordage Rope Factory, which no longer exists on Wyse Road, at the time of the explosion. His brother was badly hurt in the blast.",
+           "/images/Dillman.png",
+           "/audio/Dillman.mp3"), popUpStyle)
+    .addTo(markerGroup);
+
+    L.marker([44.665919, -63.570708], {icon: violetIcon})
+    .bindPopup(popUpSetUp("Charles Robinson Interview",
+        "",
+        "",
+        "/audio/Robinsons.mp3"), popUpStyle)
+    .addTo(markerGroup);
+
+    let evergreenPopUp = "";
+
+    L.marker([44.6667507965406, -63.55981269669883], {icon: greenIcon})
+    .bindPopup(evergreenPopUp, popUpStyle)
+    .addTo(markerGroup);
+
+    L.marker([44.66836058364493, -63.59571100224489], {icon: expIcon})
+    .addTo(markerGroup);
+
+    let halifaxAcademyPopUp = "";
+
+    L.marker([44.64575930956331, -63.57620007341009], {icon: blueIcon})
+    .bindPopup(halifaxAcademyPopUp, popUpStyle)
+    .addTo(markerGroup);
+
+    //----------------------------------- BLAST RADIUS FUNCTIONALITY ----------------------------------------- 
+    let blastRadius = L.circle([44.66836058364493, -63.59571100224489], {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0.5,
+        radius: 3500,
+    });
+    let blastRadBool = false
+    function showBlastRad() { 
+        if (blastRadBool === false){
+            blastRadius.addTo(map);
+            blastRadBool = true;
+        }
+        else if (blastRadBool === true){
+            map.removeLayer(blastRadius);
+            blastRadBool = false;
+        }
+    }
+    const radBtn = document.querySelector("#radBtn");
+    radBtn.addEventListener("click", showBlastRad)
 
 
-    let DillmanPopUp = '<h2>Leighton Dillman Interview</h2> \
-    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1108337683&color=%23cc9844&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-392462200" title="Dartmouth Heritage Museum" target="_blank" style="color: #cccccc; text-decoration: none;">Dartmouth Heritage Museum</a> · <a href="https://soundcloud.com/user-392462200/halifax-explosion-series-leighton-dillman-interview" title="Halifax/Dartmouth Explosion Series: Leighton Dillman Interview" target="_blank" style="color: #cccccc; text-decoration: none;">Halifax/Dartmouth Explosion Series: Leighton Dillman Interview</a></div>';
+    //----------------------------------- MEDIA PLAYER ----------------------------------------- 
 
-    L.marker([44.671336002053174, -63.58072735706985])
-    .bindPopup(DillmanPopUp)
-    .addTo(map)
-
-    let RobinsonPopUp = '<h2>Charles Robinson Interview</h2> \
-    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1111249114&color=%23cc9844&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-392462200" title="Dartmouth Heritage Museum" target="_blank" style="color: #cccccc; text-decoration: none;">Dartmouth Heritage Museum</a> · <a href="https://soundcloud.com/user-392462200/halifaxdartmouth-explosion-series-mr-and-mrs-robinson-interview" title="Halifax/Dartmouth Explosion Series: Mr. and Mrs. Robinson Interview" target="_blank" style="color: #cccccc; text-decoration: none;">Halifax/Dartmouth Explosion Series: Mr. and Mrs. Robinson Interview</a></div>'
-
-    L.marker([44.665919, -63.570708])
-    .bindPopup(RobinsonPopUp)
-    .addTo(map)
-
+    function createMediaPlayer(url){
+        return '<audio \
+                    controls \
+                    src=' + url + '> \
+                    Your browser does not support the \
+                    <code>audio</code> element. \
+                </audio>';
+    }
+    
 })();

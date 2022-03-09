@@ -1,3 +1,4 @@
+/* ----------------------------- GENERAL SETTINGS ------------------------------- */
 html, body {
     margin:0;
     padding:0;
@@ -8,8 +9,11 @@ body {
     background-image: url('concrete-wall-3.png');
     color: white;
     font-family: 'Nunito', sans-serif;
+    overflow: hidden;
 }
 
+
+/* ----------------------------- HEADER SETTINGS ------------------------------- */
 header {
     height: max-content;
     color: white;
@@ -25,32 +29,83 @@ header > a > img {
     margin-right: auto
 }
 
-#cont, #map, #about {
-    width: 100%;
-    padding: 0;
-    margin: 0
-}
-#cont {
-    position: relative;
-}
 
-#map, #about {
-    position: absolute;
-    top: 0;
-    /* left: 0 */
+/* ----------------------------- MAP AND ABOUT SETTINGS ------------------------------- */
+#mapSide {
+    position: fixed;
+    right: 0;
+    width: 70%;
+    height: 100vh;
 }
 #map {
-    width: 1000px;
-    height: 700px;
+    width: 100%;
+    height: 100vh;
     right: 0;
 }
 #about {
-    z-index: 100000;
+    float: left;
     height: max-content;
-    width: 400px;
+    width: 23%;
     margin: 10px 30px;
     padding: 10px;
-    text-align: center;
     line-height: 2rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+}
+
+
+/* ----------------------------- POPUP SETTINGS ------------------------------- */
+.popUpStyle .leaflet-popup-content-wrapper,
+.popUpStyle .leaflet-popup-tip {
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  padding: .3rem;
+}
+
+.popUpStyle #cont {
+    display: grid;
+}
+
+.popUpStyle p {
+    margin-left: 10px;
+    font-size: .9rem;
+    grid-column: 2;
+}
+
+.popUpStyle #player {
+    margin-left: 10px;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.popUpStyle img {
+    height: 150px;
+    grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+
+/* ----------------------------- LEGEND SETTINGS ------------------------------- */
+#legend {
+    position: fixed;
+    right: 0;
+    width: 150px;
+    height: 200px;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+}
+
+button {
+    color:white;
+    background: transparent;
+    border: .5px solid white;
+    border-radius: 3px;
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover {
+    background: rgba(255,255,255,0.3);
 }

@@ -9,11 +9,12 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet"> 
       
-      <link rel="stylesheet" href="styles.css">
-
       <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
       integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
       crossorigin=""></script>
+
+      <link rel="stylesheet" href="styles.css">
+
     </head>
 
     <header>
@@ -21,13 +22,17 @@
     </header>
     
     <body>
-        <div id="cont">
-            <div id="about">
-                <h2>About the Listening Map</h2>
-                <p>This map features audio clips from the Dartmouth Heritage Museum's oral history collection. They were recorded in the 1980s and 90s by members of the Dartmouth Museum Society. All of the interviewees are Dartmouthians who survived the Dartmouth/Halifax explosion of 1917, which remains the second largest manmade explosion in history.</p>
-                <p>To learn more about the Darmouth/Halifax Explosion, come visit our exhibit at historic Evergreen House.</p>
-            </div>
+        <div id="about">
+            <h2>About the Listening Map</h2>
+            <p>This map features audio clips from the Dartmouth Heritage Museum's oral history collection. They were recorded in the 1980s and 90s by members of the Dartmouth Museum Society. All of the interviewees are Dartmouthians who survived the Dartmouth/Halifax explosion of 1917, which remains the second largest manmade explosion in history.</p>
+            <p>To learn more about the Darmouth/Halifax Explosion, come visit our exhibit at historic Evergreen House.</p>
+            <p style="font-size: .7em; line-height: 1.3em;">Content warning: Many of the following audio clips contain descriptions of graphic injuries.  Some interviews contain the use of outdated and racist terminology common for the time period. The interviews are presented unedited and in its original form, as doing otherwise would be akin to erasing such racism from the historical record.</p>
+        </div>
+        <div id="mapSide">
             <div id="map"></div>
+        </div>
+        <div id="legend">
+            <button id="radBtn">Show Blast Radius</button>
         </div>
     </body>
     
