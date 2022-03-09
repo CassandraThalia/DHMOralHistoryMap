@@ -1,0 +1,56 @@
+html, body {
+    margin:0;
+    padding:0;
+}
+
+body {
+    background: black;
+    background-image: url('concrete-wall-3.png');
+    color: white;
+    font-family: 'Nunito', sans-serif;
+}
+
+header {
+    height: max-content;
+    color: white;
+    background-color: black;
+    padding: 5px;
+    font-family: sans-serif;
+}
+header > a > img {
+    width: 40px;
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#cont, #map, #about {
+    width: 100%;
+    padding: 0;
+    margin: 0
+}
+#cont {
+    position: relative;
+}
+
+#map, #about {
+    position: absolute;
+    top: 0;
+    /* left: 0 */
+}
+#map {
+    width: 1000px;
+    height: 700px;
+    right: 0;
+}
+#about {
+    z-index: 100000;
+    height: max-content;
+    width: 400px;
+    margin: 10px 30px;
+    padding: 10px;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}

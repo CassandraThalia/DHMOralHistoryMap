@@ -9,58 +9,26 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet"> 
       
+      <link rel="stylesheet" href="styles.css">
+
       <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
       integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
       crossorigin=""></script>
-
-    <style>
-        #map { 
-            height: 100%; 
-        }
-        header {
-            height: max-content;
-            color: white;
-            background-color: black;
-            padding: 3px 10px;
-            font-family: sans-serif;
-            display: flex;
-        }
-        header > img {
-            width: 40px;
-            padding: 10px
-        }
-
-        header > h1 {
-            align-self: center;
-        }
-
-        #about {
-            height: max-content;
-            width: 400px;
-            background: rgba(255,255,255,0.8);
-            position: fixed;
-            left: 15px;
-            top: 100px;
-            z-index: 2;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-    </style>
-
     </head>
 
     <header>
-        <img src="logo.png" />
-        <h1>Dartmouth Heritage Museum</h1>
+        <a href="http://dartmouthheritagemuseum.ns.ca/learn/oral-histories/"><img src="logo.png" /></a>
     </header>
     
     <body>
-        <div id="about">
-            <b>About this Map</b>
-            <p>This map features oral history clips from the Dartmouth Heritage Museum's oral history collection. They were collected in the 1980s and 90s by the Dartmouth Museum Society. All of the interviewees are Dartmouthians who survived the Dartmouth/Halifax explosion of 1917, which remains the second largest manmade explosion in history.</p>
+        <div id="cont">
+            <div id="about">
+                <h2>About the Listening Map</h2>
+                <p>This map features audio clips from the Dartmouth Heritage Museum's oral history collection. They were recorded in the 1980s and 90s by members of the Dartmouth Museum Society. All of the interviewees are Dartmouthians who survived the Dartmouth/Halifax explosion of 1917, which remains the second largest manmade explosion in history.</p>
+                <p>To learn more about the Darmouth/Halifax Explosion, come visit our exhibit at historic Evergreen House.</p>
+            </div>
+            <div id="map"></div>
         </div>
-        <div id="map"></div>
     </body>
     
     <script src="main.js"></script>
