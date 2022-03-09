@@ -57,7 +57,7 @@
     });
 
     var houseIcon = new L.Icon({
-        iconUrl: '/images/house.png',
+        iconUrl: 'images/house.png',
         iconSize: [35, 35],
         iconAnchor: [20, 30],
         popupAnchor: [1, -34],
