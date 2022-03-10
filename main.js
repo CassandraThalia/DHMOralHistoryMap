@@ -68,13 +68,11 @@
 
     let popUpSetUp = (title, img, media) => {
         return '<h1>' + title + '</h1> \
-            <div id="cont"> \
-                <img src="' + img + '"/> \
-                <div id="player">' + createMediaPlayer(media) + '</div> \
-            </div>'
+            <img src="' + img + '"/> \
+            <div id="player">' + createMediaPlayer(media) + '</div>'
     }
 
-    let popUpStyle = { className: "popUpStyle", maxWidth: 400 };
+    let popUpStyle = { className: "popUpStyle" };
 
     let langilleMarker = L.marker([44.66964336000262, -63.55930055991591], {icon: violetIcon})
     .bindPopup(popUpSetUp("Walter Langille Interview",
@@ -82,11 +80,9 @@
         "audio/Langille.mp3"), popUpStyle)
     .addTo(markerGroup);
 
-    let gentlesImg = "images/Gentles.png";
-
     let gentlesMarker = L.marker([44.658917, -63.571400], {icon: violetIcon})
     .bindPopup(popUpSetUp("Verna Gentles Interview",
-        gentlesImg,
+        "images/Gentles.png",
         "audio/Gentles.mp3"), popUpStyle)
     .addTo(markerGroup);
 
@@ -129,7 +125,7 @@
     L.marker([44.66836058364493, -63.59571100224489], {icon: expIcon})
     .addTo(markerGroup);
 
-    //----------------------------------- HOME ICONS FUNCTIONALITY ----------------------------------------- 
+    //----------------------------------- HOME MARKERS FUNCTIONALITY ----------------------------------------- 
     let tempHomeMarker;
     markerGroup.on("mouseover", function (event) {
         var clickedMarker = event.layer;
@@ -173,7 +169,6 @@
 
 
     //----------------------------------- MEDIA PLAYER ----------------------------------------- 
-
     function createMediaPlayer(url){
         return '<audio class="audio_volume_only" \
                     controls \

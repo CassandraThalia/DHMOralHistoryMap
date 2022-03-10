@@ -62,17 +62,13 @@ header > a > img {
   padding: .2rem;
 }
 
-.popUpStyle h1 {
-    text-align: center;
+.popUpStyle .leaflet-popup-content {
+    height: max-content;
+    min-width: fit-content;
 }
 
-/* .popUpStyle #cont {
-    display: grid;
-} */
-
-.popUpStyle p {
-    font-size: .9rem;
-    /* grid-column: 2; */
+.popUpStyle h1 {
+    text-align: center;
 }
 
 .popUpStyle #player {
@@ -81,23 +77,12 @@ header > a > img {
     margin-right: auto
 }
 
-.audio_volume_only {
-    width: 260px;
-    overflow: hidden;
-    direction: ltl;
-    border-top-right-radius: 0.5em 0.5em;
-    border-bottom-right-radius: 1em 0.7em;
-}
-
 .popUpStyle img {
     margin: 10px;
-    width: 175px;
+    height: 150px;
     display: block;
     margin-left: auto;
     margin-right: auto
-    /* grid-column: 1;
-    grid-row-start: 1;
-    grid-row-end: 3; */
 }
 
 
