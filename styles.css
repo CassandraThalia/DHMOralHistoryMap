@@ -59,26 +59,26 @@ header > a > img {
 .popUpStyle .leaflet-popup-tip {
   background: rgba(0,0,0,0.8);
   color: #fff;
-  padding: .3rem;
+  padding: .2rem;
 }
 
 .popUpStyle h1 {
     text-align: center;
 }
 
-.popUpStyle #cont {
+/* .popUpStyle #cont {
     display: grid;
-}
+} */
 
 .popUpStyle p {
-    align-self: start;
     font-size: .9rem;
-    grid-column: 2;
+    /* grid-column: 2; */
 }
 
 .popUpStyle #player {
-    grid-column: 2;
-    grid-row: 2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }
 
 .audio_volume_only {
@@ -91,10 +91,13 @@ header > a > img {
 
 .popUpStyle img {
     margin: 10px;
-    height: 180px;
-    grid-column: 1;
+    width: 175px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+    /* grid-column: 1;
     grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-end: 3; */
 }
 
 
@@ -125,8 +128,15 @@ button {
     border: none;
     width: 100%;
     padding: 5 0 8 0;
+    font-size: 0.7em;
 }
 
 button:hover {
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.5);
+    color: black;
+}
+
+button:active {
+    background: #333;
+    color: white;
 }
