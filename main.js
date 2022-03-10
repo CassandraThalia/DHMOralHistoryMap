@@ -68,10 +68,8 @@
 
     let popUpSetUp = (title, img, desc, media) => {
         return '<h1>' + title + '</h1> \
-            <div id="wrapper"> \
-                <img src="' + img + '"/> \
-                <p>' + desc + '</p> \
-            </div> \
+            <img src="' + img + '"/> \
+            <div id="desc"><p>' + desc + '</p></div> \
             <div id="player">' + createMediaPlayer(media) + '</div>'
     }
 
