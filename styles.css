@@ -62,19 +62,21 @@ header > a > img {
   padding: .3rem;
 }
 
+.popUpStyle h1 {
+    text-align: center;
+}
+
 .popUpStyle #cont {
     display: grid;
 }
 
 .popUpStyle p {
     align-self: start;
-    margin-left: 10px;
     font-size: .9rem;
     grid-column: 2;
 }
 
 .popUpStyle #player {
-    margin-left: 10px;
     grid-column: 2;
     grid-row: 2;
 }
@@ -88,7 +90,7 @@ header > a > img {
 }
 
 .popUpStyle img {
-    margin: 20px 10px 10px 10px;
+    margin: 10px;
     height: 180px;
     grid-column: 1;
     grid-row-start: 1;
@@ -101,7 +103,7 @@ header > a > img {
     position: fixed;
     right: 0;
     width: 150px;
-    height: 200px;
+    height: fit-content;
     background: rgba(0,0,0,0.8);
     color: #fff;
     box-shadow: 0 5px 5px rgb(0 0 0 / 0.3);
@@ -123,8 +125,6 @@ button {
     border: none;
     width: 100%;
     padding: 5 0 8 0;
-    position: absolute;
-    bottom: 0;
 }
 
 button:hover {

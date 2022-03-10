@@ -98,21 +98,21 @@
         "audio/Ardley.mp3"), popUpStyle)
     .addTo(markerGroup);
 
-    let morashMarker = L.marker([44.67163177762183, -63.584244984874076], {icon: violetIcon})
+    let morashMarker = L.marker([44.67163177762183, -63.584244984874076], {icon: redIcon})
     .bindPopup(popUpSetUp("Ethel Morash Interview",
         "Ethel Morash was at home in Dartmouth at the time of the explosion. She recalls her fortune in the event itself, as well as the strange circumstances she was discovered in after the blast. ",
         "",
         "audio/Morash.mp3"), popUpStyle)
     .addTo(markerGroup);
 
-    let dillmanMarker = L.marker([44.671336002053174, -63.58072735706985], {icon: violetIcon})
+    let dillmanMarker = L.marker([44.671336002053174, -63.58072735706985], {icon: redIcon})
     .bindPopup(popUpSetUp("Leighton Dillman Interview",
         "Leighton Dillman, namesake of the Dartmouth commons, was approximately 20 years old at the time of the explosion. He was working at the Consumer Cordage Rope Company when the blast occurred.",
         "images/Dillman.png",
         "audio/Dillman.mp3"), popUpStyle)
     .addTo(markerGroup);
 
-    let robinsonMarker = L.marker([44.665919, -63.570708], {icon: violetIcon})
+    let robinsonMarker = L.marker([44.665919, -63.570708], {icon: redIcon})
     .bindPopup(popUpSetUp("Charles Robinson Interview",
         "Mr. Robinson was home at the time of the blast but his sister was struck by debris and hurt on her walk to school. He also believes his dog had a premonition of the event.",
         "",
@@ -126,8 +126,7 @@
         ""), popUpStyle)
     .addTo(markerGroup)
 
-    let evergreenPopUp = '<h2 style="text-align: center"><a href="http://dartmouthheritagemuseum.ns.ca">Historic Evergreen House</a></h2> \
-            <img src="/images/evergreen.png" />'
+    let evergreenPopUp = '<a href="http://dartmouthheritagemuseum.ns.ca"><img src="images/evergreen.png" /></a>'
 
     L.marker([44.6667507965406, -63.55981269669883], {icon: greenIcon})
     .bindPopup(evergreenPopUp, popUpStyle)
