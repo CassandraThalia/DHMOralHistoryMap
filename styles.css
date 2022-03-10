@@ -78,7 +78,7 @@ header > a > img {
 }
 
 .popUpStyle img {
-    margin: 10px;
+    margin: 20px;
     height: 150px;
     display: block;
     margin-left: auto;
@@ -94,7 +94,7 @@ header > a > img {
     height: fit-content;
     background: rgba(0,0,0,0.8);
     color: #fff;
-    box-shadow: 0 5px 5px rgb(0 0 0 / 0.3);
+    box-shadow: 0 5px 5px rgb(0 0 0 / 0.6);
 }
 
 .tableImg {
