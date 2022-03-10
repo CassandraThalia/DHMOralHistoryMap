@@ -14,38 +14,36 @@
     //----------------------------------- ICONS ----------------------------------------- 
     var greenIcon = new L.Icon({
         iconUrl: 'images/green-icon.png',
-        // shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
         iconSize: [41, 41],
         iconAnchor: [12, 41],
         popupAnchor: [1, -34],
-        // shadowSize: [41, 41]
+        shadowSize: [60, 41]
     });
 
     var redIcon = new L.Icon({
         iconUrl: 'images/red-icon.png',
-        // shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
         iconSize: [41, 41],
         iconAnchor: [12, 41],
         popupAnchor: [1, -34],
-        // shadowSize: [41, 41]
+        shadowSize: [60, 41]
     });
 
     var violetIcon = new L.Icon({
         iconUrl: 'images/violet-icon.png',
-        // shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
         iconSize: [41, 41],
         iconAnchor: [12, 41],
         popupAnchor: [1, -34],
-        // shadowSize: [41, 41]
+        shadowSize: [60, 41]
     });
 
     var expIcon = new L.Icon({
         iconUrl: 'images/exp2.png',
-        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
         iconSize: [80, 80],
         iconAnchor: [12, 41],
         popupAnchor: [1, -34],
-        shadowSize: [41, 41]
     });
 
     var houseIcon = new L.Icon({
