@@ -1,5 +1,5 @@
 (() => {
-    var map = L.map('map')
+    var map = L.map('map', {tap: L.Browser.safari && L.Browser.mobile})
     .setView([44.65937791848819, -63.57625976513644], 14);
 
     L.tileLayer('https://api.mapbox.com/styles/v1/cassandrathalia/cl0lhm5k9002j14mjs0q6t7vz/tiles/256/{z}/{x}/{y}@2x?access_token={accessToken}', {
@@ -110,7 +110,7 @@
     let campbellMarker = L.marker([44.64575930956331, -63.57620007341009], {icon: violetIcon})
     .bindPopup(popUpSetUp("Campbell Sisters Interview", 
         "images/placeholder.png",
-        "Frances Mary (Mollie) Campbell and Margaret Isobell Campbell (both nee Kuhn) of Dartmouth recount their memories of the day of the explosion, sometimes disagreeing on the order of events. The two sisters were at school at the Halifax County Academy at the time of the explosion, and when they returned home, they learned their landlady had been killed.",
+        "Mollie and Margaret (both nee Kuhn) of Dartmouth recount their memories of the day of the explosion, sometimes disagreeing on the order of events. The two sisters were at school at the Halifax County Academy at the time of the explosion, and when they returned home, they learned their landlady had been killed.",
         "audio/Campbells.mp3"), popUpStyle)
     .addTo(markerGroup)
 
@@ -146,7 +146,7 @@
         color: 'red',
         fillColor: '#f03',
         fillOpacity: 0.5,
-        radius: 3500,
+        radius: 2400,
     });
     let blastRadBtnTxt = document.querySelector("#radBtn");
     let blastRadBool = false
