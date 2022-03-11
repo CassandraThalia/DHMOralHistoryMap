@@ -67,7 +67,7 @@ h1 {
 
 .popUpStyle .leaflet-popup-content {
     height: max-content;
-    min-width: fit-content;
+    min-width: 500px;
 }
 
 .popUpStyle h1 {
