@@ -1,7 +1,6 @@
 (() => {
-    var map = L.map('map', {tap: L.Browser.safari && L.Browser.mobile})
+    var map = L.map('map', {tap: false})
     .setView([44.65937791848819, -63.57625976513644], 14);
-    //map.tap.disable();
 
     L.tileLayer('https://api.mapbox.com/styles/v1/cassandrathalia/cl0lhm5k9002j14mjs0q6t7vz/tiles/256/{z}/{x}/{y}@2x?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
