@@ -111,7 +111,7 @@
     .bindPopup(popUpSetUp("Campbell Sisters Interview", 
         "images/placeholder.png",
         "Frances Mary (Mollie) Campbell and Margaret Isobell Campbell (both nee Kuhn) of Dartmouth recount their memories of the day of the explosion, sometimes disagreeing on the order of events. The two sisters were at school at the Halifax County Academy at the time of the explosion, and when they returned home, they learned their landlady had been killed.",
-        ""), popUpStyle)
+        "audio/Campbells.mp3"), popUpStyle)
     .addTo(markerGroup)
 
     let evergreenPopUp = '<a href="http://dartmouthheritagemuseum.ns.ca"><img src="images/evergreen.png" /></a>'
@@ -169,7 +169,7 @@
     //----------------------------------- MEDIA PLAYER ----------------------------------------- 
     function createMediaPlayer(url){
         return '<audio class="audio_volume_only" \
-                    controls \
+                    controls preload \
                     src=' + url + '> \
                     Your browser does not support the \
                     <code>audio</code> element. \
