@@ -1,6 +1,6 @@
 (() => {
     var map = L.map('map', {tap: false})
-    .setView([44.65937791848819, -63.57625976513644], 12);
+    .setView([44.65937791848819, -63.57625976513644], 14);
 
     L.tileLayer('https://api.mapbox.com/styles/v1/cassandrathalia/cl0lhm5k9002j14mjs0q6t7vz/tiles/256/{z}/{x}/{y}@2x?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -60,8 +60,8 @@
         return '<h1>' + title + '</h1> \
             <img src="' + img + '"/> \
             <div id="desc"> \
-                <h3> Year: ' + year + '</h3> \
-                <h3> Interviewed by: ' + ivr + '</h3> \
+                <h3>' + year + '</h3> \
+                <h3> Interviewed by ' + ivr + '</h3> \
                 <p>' + about + '</p> \
             </div> \
             <div id="player">' + createMediaPlayer(media) + '</div>'
@@ -71,10 +71,10 @@
 
     let langilleMarker = L.marker([44.66964336000262, -63.55930055991591], {icon: violetIcon})
     .bindPopup(popUpSetUp("Walden Langille",
-        "images/placeholder.png",
+        "images/hawthorne-school.png",
         "1992",
         "James Candow",
-        "",
+        "Walden Langille was at Hawthorne School at the time of the explosion.",
         "audio/Langille.mp3"), popUpStyle)
     .addTo(markerGroup);
 
@@ -89,7 +89,7 @@
 
     let ardleyMarker = L.marker([44.6693319810874, -63.56489863108046], {icon: violetIcon})
     .bindPopup(popUpSetUp("Mabel Ardley",
-        "images/placeholder.png",
+        "images/greenvale-school.png",
         "1992",
         "Lois Richards",
         "Mabel Ardley, nee Livingstone, was at Greenvale School at the time of the explosion.",
@@ -116,10 +116,10 @@
 
     let robinsonMarker = L.marker([44.665919, -63.570708], {icon: redIcon})
     .bindPopup(popUpSetUp("Charles Robinson",
-        "images/placeholder.png",
+        "images/park-school.png",
         "1991",
         "Lois Richards",
-        "Charles Robinson was at home on Park Street, now Alderny Drive, at the time of the explosion.",
+        "Charles Robinson was at home on Water Street, now Alderny Drive, at the time of the explosion. His sister was hurt on her way to Park School.",
         "audio/Robinsons.mp3"), popUpStyle)
     .addTo(markerGroup);
 
@@ -142,11 +142,11 @@
     .addTo(markerGroup)
 
     let youngMarker = L.marker([46.138612823761356, -60.19232623569486], {icon: violetIcon})
-    .bindPopup(popUpSetUp("Mrs. G. Young",
+    .bindPopup(popUpSetUp("Mrs G. Young",
         "images/placeholder.png",
-        "",
-        "",
-        "",
+        "1981",
+        "Janet Kitz",
+        "Mrs. Young was all the way up in Sydney when the explosion occured, but still heard the blast.",
         "audio/Young.mp3"), popUpStyle)
     .addTo(markerGroup)
 
