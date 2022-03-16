@@ -83,15 +83,8 @@ h1 {
 }
 
 .popUpStyle #desc {
-    display: table;
-    height: 150px;
-}
-
-.popUpStyle p {
     font-family: 'Nunito', sans-serif;
     font-size: .9rem;
-    display: table-cell;
-    vertical-align: middle;
 }
 
 .popUpStyle #player {

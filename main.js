@@ -1,6 +1,6 @@
 (() => {
     var map = L.map('map', {tap: false})
-    .setView([44.65937791848819, -63.57625976513644], 14);
+    .setView([44.65937791848819, -63.57625976513644], 12);
 
     L.tileLayer('https://api.mapbox.com/styles/v1/cassandrathalia/cl0lhm5k9002j14mjs0q6t7vz/tiles/256/{z}/{x}/{y}@2x?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -56,10 +56,14 @@
     //----------------------------------- LISTENING MARKERS AND POPUPS ----------------------------------------- 
     let markerGroup = L.featureGroup().addTo(map);
 
-    let popUpSetUp = (title, img, desc, media) => {
+    let popUpSetUp = (title, img, year, ivr, about, media) => {
         return '<h1>' + title + '</h1> \
             <img src="' + img + '"/> \
-            <div id="desc"><p>' + desc + '</p></div> \
+            <div id="desc"> \
+                <h3> Year: ' + year + '</h3> \
+                <h3> Interviewed by: ' + ivr + '</h3> \
+                <p>' + about + '</p> \
+            </div> \
             <div id="player">' + createMediaPlayer(media) + '</div>'
     }
 
@@ -68,50 +72,82 @@
     let langilleMarker = L.marker([44.66964336000262, -63.55930055991591], {icon: violetIcon})
     .bindPopup(popUpSetUp("Walden Langille",
         "images/placeholder.png",
-        "Walden was at school at the time of the explosion. He recounts his memories of Dartmouth at the time, the aftermath of the blast, and the effect of the explosion on the many different Dartmouth industries.",
+        "1992",
+        "James Candow",
+        "",
         "audio/Langille.mp3"), popUpStyle)
     .addTo(markerGroup);
 
     let gentlesMarker = L.marker([44.658917, -63.571400], {icon: violetIcon})
-    .bindPopup(popUpSetUp("Verna Gentles Interview",
+    .bindPopup(popUpSetUp("Verna Gentles",
         "images/Gentles.png",
-        "Verna was on the ferry at the time of the explosion. She was injured in the blast and was given medical attention from an officer and a nurse at a house on Victoria Road in Halifax.",
+        "1990",
+        "Lois Richards",
+        "Verna Gentles owned and opperated The Hat Shop in downtown Dartmouth. She was on the ferry at the time of the explosion.",
         "audio/Gentles.mp3"), popUpStyle)
     .addTo(markerGroup);
 
     let ardleyMarker = L.marker([44.6693319810874, -63.56489863108046], {icon: violetIcon})
-    .bindPopup(popUpSetUp("Mabel Ardley Interview",
+    .bindPopup(popUpSetUp("Mabel Ardley",
         "images/placeholder.png",
-        "Mabel was only 8 years old at the time of the explosion. She was at school at Greenvale School on Ochterloney St. when the blast occurred.",
+        "1992",
+        "Lois Richards",
+        "Mabel Ardley, nee Livingstone, was at Greenvale School at the time of the explosion.",
         "audio/Ardley.mp3"), popUpStyle)
     .addTo(markerGroup);
 
     let morashMarker = L.marker([44.67163177762183, -63.584244984874076], {icon: redIcon})
-    .bindPopup(popUpSetUp("Ethel Morash Interview",
+    .bindPopup(popUpSetUp("Ethel Morash",
         "images/placeholder.png",
-        "Ethel was at home at the time of the explosion. In the first clip, she recalls the event itself as well as the strange circumstances she was discovered in after the blast.",
+        "1989",
+        "Lois Richards",
+        "Ethel Morash, nee Mitchell, was at home on Hester street at the time of the explosion. She became a popular local musician.",
         "audio/Morash.mp3"), popUpStyle)
     .addTo(markerGroup);
 
     let dillmanMarker = L.marker([44.671336002053174, -63.58072735706985], {icon: redIcon})
-    .bindPopup(popUpSetUp("Leighton Dillman Interview",
+    .bindPopup(popUpSetUp("Leighton Dillman",
         "images/Dillman.png",
-        "Leighton, namesake of the Dartmouth Commons, was approximately 20 years old at the time of the explosion. He was working with his brother at the Consumer Cordage Rope Company on Wyse Road when the blast occurred.",
+        "1981",
+        "Janet Kitz",
+        "Leighton Dillman, namesake of the Dartmouth commons, was at work at the Consumer Cordage Rope Company on Wyse Road at the time of the explosion.",
         "audio/Dillman.mp3"), popUpStyle)
     .addTo(markerGroup);
 
     let robinsonMarker = L.marker([44.665919, -63.570708], {icon: redIcon})
-    .bindPopup(popUpSetUp("Charles Robinson Interview",
+    .bindPopup(popUpSetUp("Charles Robinson",
         "images/placeholder.png",
-        "Charles was at home at the time of the blast but his sister was struck by debris and hurt on her walk to school. He also believes his dog had a premonition of the event.",
+        "1991",
+        "Lois Richards",
+        "Charles Robinson was at home on Park Street, now Alderny Drive, at the time of the explosion.",
         "audio/Robinsons.mp3"), popUpStyle)
     .addTo(markerGroup);
 
     let campbellMarker = L.marker([44.64575930956331, -63.57620007341009], {icon: violetIcon})
-    .bindPopup(popUpSetUp("Campbell Sisters Interview", 
+    .bindPopup(popUpSetUp("Campbell Sisters", 
         "images/placeholder.png",
-        "Mollie and Margaret (both nee Kuhn) of Dartmouth recount their memories of the day of the explosion, sometimes disagreeing on the order of events. The two sisters were at school at the Halifax County Academy at the time of the explosion, and when they returned home, they learned their landlady had been killed.",
+        "1992",
+        "Lois Richards",
+        "The Cambpell sisters, both nee Kuhn, were at school at the Halifax Academy at the time of the explosion.",
         "audio/Campbells.mp3"), popUpStyle)
+    .addTo(markerGroup);
+
+    let forbesMarker = L.marker([44.94250699610419, -63.99674375712727], {icon: violetIcon})
+    .bindPopup(popUpSetUp("Mollie Forbes",
+        "images/placeholder.png",
+        "1991",
+        "Lois Richards",
+        "Mollie Forbes was on her way home by train from the Annapolis Valley at the time of the explosion. She was just outside Windsor when the blast occured.",
+        "audio/Forbes.mp3"), popUpStyle)
+    .addTo(markerGroup)
+
+    let youngMarker = L.marker([46.138612823761356, -60.19232623569486], {icon: violetIcon})
+    .bindPopup(popUpSetUp("Mrs. G. Young",
+        "images/placeholder.png",
+        "",
+        "",
+        "",
+        "audio/Young.mp3"), popUpStyle)
     .addTo(markerGroup)
 
     let evergreenPopUp = '<a href="http://dartmouthheritagemuseum.ns.ca"><img src="images/evergreen.png" /></a>'
