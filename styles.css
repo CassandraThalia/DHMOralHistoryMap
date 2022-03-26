@@ -77,14 +77,25 @@ h1 {
 
 .popUpStyle img {
     margin: 0px 20px 10px 20px;
-    height: 180px;
+    height: 200px;
     border-radius: 10px;
     float: left;
+    width: 40%;
+    background-position: center center;
+    object-fit: cover;
 }
 
 .popUpStyle #desc {
     font-family: 'Nunito', sans-serif;
     font-size: .9rem;
+    width: 50%;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.popUpStyle #caption {
+    color: grey;
+    font-style: italic;
 }
 
 .popUpStyle #player {

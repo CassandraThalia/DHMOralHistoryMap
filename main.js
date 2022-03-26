@@ -17,7 +17,7 @@
         shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
         iconSize: [41, 41],
         iconAnchor: [12, 41],
-        popupAnchor: [1, -34],
+        popupAnchor: [8, -34],
         shadowSize: [60, 41]
     });
 
@@ -26,7 +26,7 @@
         shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
         iconSize: [41, 41],
         iconAnchor: [12, 41],
-        popupAnchor: [1, -34],
+        popupAnchor: [8, -34],
         shadowSize: [60, 41]
     });
 
@@ -35,7 +35,7 @@
         shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
         iconSize: [41, 41],
         iconAnchor: [12, 41],
-        popupAnchor: [1, -34],
+        popupAnchor: [8, -34],
         shadowSize: [60, 41]
     });
 
@@ -58,11 +58,12 @@
 
     let popUpSetUp = (title, img, imgTitle, year, ivr, about, media) => {
         return '<h1>' + title + '</h1> \
-            <img src="' + img + '" title="' + imgTitle + '" /> \
+            <img src="' + img + '" alt="' + imgTitle + '" /> \
             <div id="desc"> \
-                <h3> ' + ivr + '</h3> \
+                <h4> ' + ivr + '</h4> \
                 <i>' + year + '</i> \
                 <p>' + about + '</p> \
+                <small id="caption">' + imgTitle + '</small> \
             </div> \
             <div id="player">' + media + '</div>'
     }
@@ -71,7 +72,7 @@
 
     let langilleMarker = L.marker([44.66964336000262, -63.55930055991591], {icon: violetIcon})
     .bindPopup(popUpSetUp("Walden Langille",
-        "images/hawthorne-school.png", "Hawthorne School damaged by explosion. Accession no. 2009.038.002",
+        "images/hawthorne-school.png", "Hawthorne School damaged by explosion. 2009.038.002",
         "1992",
         "Interviewed by James Candow",
         "Walden Langille was at Hawthorne School at the time of the explosion. He particularly recalls the effect of the event on local Dartmouth industries.",
@@ -80,7 +81,7 @@
 
     let gentlesMarker = L.marker([44.658917, -63.571400], {icon: violetIcon})
     .bindPopup(popUpSetUp("Verna Gentles",
-        "images/Gentles.png", "Image of Verna Gentles. Accession no. 1994.014.001",
+        "images/Gentles.png", "Image of Verna Gentles. 1994.014.001",
         "1990",
         "Interviewed by Lois Richards",
         "Verna Gentles owned and opperated The Hat Shop in downtown Dartmouth. She was on the ferry at the time of the explosion.",
@@ -89,7 +90,7 @@
 
     let ardleyMarker = L.marker([44.6693319810874, -63.56489863108046], {icon: violetIcon})
     .bindPopup(popUpSetUp("Mabel Ardley",
-        "images/greenvale-school.png", "Image of Greenvale School. Accession no. 1988.038.117",
+        "images/greenvale-school.png", "Image of Greenvale School. 1988.038.117",
         "1992",
         "Interviewed by Lois Richards",
         "Mabel Ardley, nee Livingstone, was at Greenvale School at the time of the explosion.",
@@ -107,7 +108,7 @@
 
     let dillmanMarker = L.marker([44.671336002053174, -63.58072735706985], {icon: redIcon})
     .bindPopup(popUpSetUp("Leighton Dillman",
-        "images/Dillman.png", "Image of Leighton Dillman taken in 1985. Accession no. 1988.035.003",
+        "images/Dillman.png", "Image of Leighton Dillman taken in 1985. 1988.035.003",
         "1981",
         "Interviewed by Janet Kitz",
         "Leighton Dillman, namesake of the Dartmouth commons, was at work at the Consumer Cordage Rope Company on Wyse Road at the time of the explosion.",
@@ -116,7 +117,7 @@
 
     let robinsonMarker = L.marker([44.665919, -63.570708], {icon: redIcon})
     .bindPopup(popUpSetUp("Charles Robinson",
-        "images/park-school.png", "Image of Park School with explosion damage. Accession no. 1986.036.023",
+        "images/park-school.png", "Image of Park School with explosion damage. 1986.036.023",
         "1991",
         "Interviewed by Lois Richards",
         "Charles Robinson was at home on Water Street, now Alderny Drive, at the time of the explosion. His sister was hurt on her way to Park School.",
@@ -134,7 +135,7 @@
 
     let forbesMarker = L.marker([44.94250699610419, -63.99674375712727], {icon: violetIcon})
     .bindPopup(popUpSetUp("Mollie Forbes",
-        "images/Forbes.png", "Mollie Forbes, foreground, with Dr. Helen Creighton. Accession no. 1989.061.001",
+        "images/Forbes.png", "Mollie Forbes, foreground, with Dr. Helen Creighton. 1989.061.001",
         "1991",
         "Interviewed by Lois Richards",
         "Mollie Forbes was on her way home by train from the Annapolis Valley at the time of the explosion. She was just outside Windsor when the blast occured.",
@@ -152,7 +153,7 @@
 
     let creightonMarker = L.marker([44.667579635922564, -63.562993538011625], {icon: redIcon})
     .bindPopup(popUpSetUp("Dr. Helen Creighton",
-        "images/placeholder.png", "",
+        "images/Creighton.png", "Image of Helen Creighton standing in front of her greenhouse, which was damaged in the explosion. 1995.031.191",
         "1975",
         "Interviewed by Patricia J. Harrison",
         "Dr Helen Creighton, renound folklorist and recipiant of the Order of Canada, was at home on Portland Street at the time of the explosion.",
@@ -187,7 +188,7 @@
     let blastRadius = L.circle([44.66836058364493, -63.59571100224489], {
         color: 'red',
         fillColor: '#f03',
-        fillOpacity: 0.5,
+        fillOpacity: 0.3,
         radius: 2400,
     });
     let blastRadBtnTxt = document.querySelector("#radBtn");
